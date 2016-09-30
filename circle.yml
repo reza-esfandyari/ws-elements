@@ -12,6 +12,7 @@ machine:
 ## Customize dependencies
 dependencies:
   pre:
+
     - npm run clean #"npm cache clean && npm run rimraf -- node_modules doc coverage dist"
     - npm install --global webpack
     - npm install --global webpack-dev-server
@@ -22,7 +23,7 @@ dependencies:
     - npm install webpack@2.1.0-beta.21 --save-dev
     - npm uninstall "@types/selenium-webdriver" --save-dev
     - npm install "@types/selenium-webdriver@2.44.26" --save-dev
-    - npm run clean:install #"npm set progress=false && npm install"
+    - npm install 
   override:
     - npm run build:prod
 
