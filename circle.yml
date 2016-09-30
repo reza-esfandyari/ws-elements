@@ -19,11 +19,11 @@ dependencies:
     - npm install --global karma-cli
     - npm install --global protractor
     - npm install --global typescript
+    - npm install 
     - npm uninstall webpack --save-dev
     - npm install webpack@2.1.0-beta.21 --save-dev
     - npm uninstall "@types/selenium-webdriver" --save-dev
     - npm install "@types/selenium-webdriver@2.44.26" --save-dev
-    - npm install 
   override:
     - npm run build:prod
 
