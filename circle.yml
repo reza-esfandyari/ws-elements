@@ -24,6 +24,7 @@ dependencies:
     - npm install
   override:
     - npm run build:prod
+    - mv AppSpec.yml dist
 
 
 ## Customize test commands
