@@ -31,6 +31,13 @@ test:
   override:
     - npm run test
 
+    
+general:
+  artifacts:
+    - "dist" # relative to the build directory
+    - "AppSpec.yml" # a single file, relative to the build directory    
+    
+    
 deployment:
   staging:
     branch: master
@@ -41,7 +48,7 @@ deployment:
           revision_type: S3
           s3_location:
             bucket: ws-my-bucket
-            key_pattern: apps/ws-deployment-{SHORT_COMMIT}-{BUILD_NUM}
+            key_pattern: apps/ws-deployment-{BRANCH}-{SHORT_COMMIT}-{BUILD_NUM}
         region: us-west-2
         deployment_group: ws-deployment-group
         deployment_config: CodeDeployDefault.AllAtOnce
