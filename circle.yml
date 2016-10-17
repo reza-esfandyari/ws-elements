@@ -24,7 +24,7 @@ dependencies:
     - npm install
   override:
     - npm run build:prod
-    - mv AppSpec.yml dist
+    - mv AppSpec.yml dist 
 
 
 ## Customize test commands
@@ -36,7 +36,6 @@ test:
 general:
   artifacts:
     - "dist" # relative to the build directory
-    - "AppSpec.yml" # a single file, relative to the build directory    
     
     
 deployment:
