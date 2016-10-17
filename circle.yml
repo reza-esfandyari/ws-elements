@@ -26,7 +26,6 @@ dependencies:
     - npm run build:prod
     - mv AppSpec.yml dist 
 
-
 ## Customize test commands
 test:
   override:
@@ -51,4 +50,4 @@ deployment:
             key_pattern: apps/ws-deployment-{BRANCH}-{SHORT_COMMIT}-{BUILD_NUM}
         region: us-west-2
         deployment_group: ws-deployment-group
-        deployment_config: CodeDeployDefault.AllAtOnce
+        deployment_config: CodeDeployDefault.OneAtATime
