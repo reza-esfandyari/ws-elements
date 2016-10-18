@@ -47,7 +47,7 @@ deployment:
           revision_type: S3
           s3_location:
             bucket: ws-my-bucket
-            key_pattern: apps/ws-deployment-{BRANCH}-{SHORT_COMMIT}-{BUILD_NUM}
+            key_pattern: apps/ws-deployment-{BRANCH}-{SHORT_COMMIT}-{BUILD_NUM}.zip
         region: us-west-2
         deployment_group: ws-deployment-group
         deployment_config: CodeDeployDefault.OneAtATime
